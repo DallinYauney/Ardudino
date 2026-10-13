@@ -2,6 +2,20 @@
 
 The idea is to connect an LCD to the arduino, along with one button to jump.
 
+## Project Structure
+
+### Dependencies
+
+This project was written in Arduino Studio 2.5, and uses the following libraries:
+
+- LiquidCrystal by Arduino, Adafruit
+
+### Files and Folders
+
+Documentation lives in the `/docs` folder, and proposals are made by submitting pull requests to markdown documents within it.
+
+References and specifications live inside `/docs/reference`, such as data sheets and schematics.
+
 ## Game Mechanics
 
 There's a character on the left of the screen, and obstacles come from the right side (or, technically, which he encounters as he moves to the right) which he has to jump to avoid. The speed of the oncoming obstacles grows over time, and so do the points (kept track of on a separate LCD probably).
