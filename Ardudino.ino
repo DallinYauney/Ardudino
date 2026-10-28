@@ -1,11 +1,4 @@
-#<<<<<<< Updated upstream
-=======
 #include <LiquidCrystal.h>
-#include <TM1637Display.h> // NEW: Include the 4-digit display library
-
-// NEW: TM1637 connection pins
-#define CLK 6
-#define DIO 7
 
 int dinoPos = 0;
 int cactusPos = 17;
@@ -19,11 +12,9 @@ int gameSpeed = 500; // Started slower than original 350ms
 bool obstacleActive = false; 
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-TM1637Display tm(CLK, DIO); //Create 4-digit display instance
 
 void setup(){
   lcd.begin(16,2);
-  tm.setBrightness(7); // Set 4-digit display brightness (0-7)
 }
 
 void loop(){
@@ -35,8 +26,6 @@ void loop(){
   lcd.setCursor((dinoPos) % 40, 0); 
   lcd.print("Score: ");
   lcd.print(score);
-
-  tm.showNumberDec(score); // NEW: Update the 4-digit display with the current score
 
   delay(gameSpeed); // Uses dynamic speed variable
 }
@@ -67,4 +56,3 @@ void setChar(int col, int row, char character) {
   lcd.setCursor(col % 40, row);
   lcd.write(character);
 }
->>>>>>> Stashed changes
