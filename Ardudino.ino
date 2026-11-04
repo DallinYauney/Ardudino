@@ -14,6 +14,7 @@ bool obstacleActive = false;
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
 void setup(){
+  delay(50);
   lcd.begin(16,2);
 }
 
